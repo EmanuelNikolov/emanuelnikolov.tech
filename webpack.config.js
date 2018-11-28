@@ -5,6 +5,9 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+    optimization: {
+        minimize: true
+    },
     entry: [
         'babel-polyfill',
         './src/js/index.js',
@@ -20,7 +23,7 @@ module.exports = {
             {
                 enforce: 'pre',
                 test: /\.js?$/,
-                exclude: [/node_modules/, /vendors/],
+                exclude: [/node_modules/, /vendors/, /dist/],
                 loader: 'eslint-loader',
                 options: {
                     fix: true,
@@ -28,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
-                exclude: [/node_modules/, /vendors/],
+                exclude: [/node_modules/, /vendors/, /dist/],
                 use: [
                     {
                         loader: 'babel-loader',
@@ -50,17 +53,13 @@ module.exports = {
                 test: /\.html$/,
                 use: ['html-loader'],
             },
-            // Font-awesome 4.7.X
             {
-                test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                exclude: [/vendors/, /img/],
-                loader: 'file-loader?name=fonts/[name].[ext]',
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
             },
-            // MDB
             {
-                test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                exclude: [/node_modules/, /img/],
-                loader: 'file-loader?name=font/roboto/[name].[ext]',
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+                loader: "file-loader?name=fonts/[name].[ext]"
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
@@ -70,15 +69,19 @@ module.exports = {
                     useRelativePath: true,
                 },
             },
+            // particles.js
+            {
+                test: /particles\.js/,
+                loader: 'exports-loader?particlesJS=window.particlesJS,pJS=window.pJS'
+            }
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: 'main.css'}),
+        new MiniCssExtractPlugin({ filename: 'main.css' }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
             'window.$': 'jquery',
-            'window.jQuery': 'jquery',
             Waves: 'node-waves',
         }),
         new HtmlWebpackPlugin({
@@ -86,6 +89,6 @@ module.exports = {
         }),
         new CleanWebpackPlugin(['dist']),
     ],
-    devtool: 'source-map',
+    devtool: false,
     target: 'web',
 };

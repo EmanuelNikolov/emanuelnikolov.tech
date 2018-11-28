@@ -1,4 +1,18 @@
-$fa-font-path: '~font-awesome/fonts';
-
-@import '~font-awesome/scss/font-awesome.scss';
 @import '~bootstrap/scss/bootstrap';
+
+html, body, #particles-js {
+  height: 100%;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
