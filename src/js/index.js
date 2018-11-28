@@ -1,6 +1,7 @@
 import 'jquery';
 import 'popper.js';
 import 'mdbootstrap/js/mdb';
+require("font-awesome-webpack-4");
 import particles from 'particles.js';
 
 const particlesConfig = {
@@ -9,7 +10,7 @@ const particlesConfig = {
             "value": 109,
             "density": {
                 "enable": true,
-                "value_area": 650
+                "value_area": 1500
             }
         },
         "color": {
@@ -22,7 +23,7 @@ const particlesConfig = {
                 "color": "#000000"
             },
             "polygon": {
-                "nb_sides": 7
+                "nb_sides": 5
             },
             "image": {
                 "src": "img/github.svg",
@@ -41,7 +42,7 @@ const particlesConfig = {
             }
         },
         "size": {
-            "value": 3,
+            "value": 2.5,
             "random": true,
             "anim": {
                 "enable": false,
@@ -54,7 +55,7 @@ const particlesConfig = {
             "enable": true,
             "distance": 150,
             "color": "#000000",
-            "opacity": 0.34724140380229346,
+            "opacity": 0.4,
             "width": 0
         },
         "move": {
