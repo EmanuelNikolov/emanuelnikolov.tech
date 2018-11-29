@@ -1,6 +1,5 @@
 import 'jquery';
 import 'popper.js';
-import 'mdbootstrap/js/mdb';
 require("font-awesome-webpack-4");
 import particles from 'particles.js';
 

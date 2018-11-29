@@ -24,8 +24,6 @@
     "font-awesome": "^4.7.0",
     "font-awesome-webpack-4": "^1.0.0",
     "jquery": "^3.3.1",
-    "mdbootstrap": "^4.5.15",
-    "node-waves": "^0.7.6",
     "particles.js": "^2.0.0",
     "popper.js": "^1.14.5"
   },

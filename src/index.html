@@ -9,23 +9,93 @@
 </head>
 
 <body>
-  <!-- Heading Start -->
-  <div id="particles-js" class="view">
-    <div class="mask">
-      <div class="container-fluid d-flex align-items-center justify-content-center h-100">
-        <div class="row d-flex justify-content-center text-center">
-          <div class="col animated fadeIn">
-            <h1 class="display-4 font-weight-normal">Hi, I'm Emanuel Nikolov</h1>
-            <hr class="hr-dark">
-            <button type="button" class="btn btn-outline-black waves-effect waves-light">Projects <i class="fa fa-code amber-text"></i></button>
+  <!-- Header Start -->
+  <header>
+    <div id="particles-js"></div>
+    <div class="container-fluid d-flex flex-column justify-content-around align-items-center text-center h-100">
+      <div class="row d-flex justify-content-center">
+        <div class="col">
+          <h1>Hi, I'm Emanuel Nikolov</h1>
+          <hr class="hr">
+          <a href="https://github.com/EmanuelNikolov" target="_blank"><i class="fa fa-github black fa-3x ml-2"></i></a>
+          <a href="https://twitter.com/EmanuelNikolov" target="_blank"><i class="fa fa-twitter black fa-3x ml-2"></i></a>
+          <a href="mailto:enikolov.intl@gmail.com"><i class="fa fa-envelope-o black fa-3x ml-2"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <a href="#projects">
+          <div class="round">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Start -->
+  <main class="mb-3">
+    <section id="projects">
+      <div class="container pt-3 text-center">
+        <div class="row d-flex justify-content-center align-items-stretch">
+          <div class="col-12 col-md-6 col-xl-4 mb-2 d-flex align-items-stretch">
+            <div class="card">
+              <img class="card-img-top img-fluid" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Game Hound Logo">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h4 class="card-title">Game Hound</h4>
+                <p class="card-text">Symfony Web App for searching and organizing games into collections</p>
+                <div class="button-group" role="group">
+                  <a href="http://gamehound.emanuelnikolov.tech/" class="btn btn-primary mb-1">Visit Website<i
+                    class="fa fa-sign-in ml-2"></i></a>
+                  <a href="https://github.com/EmanuelNikolov/game-hound" class="btn btn-primary mb-1">View on GitHub<i
+                      class="fa fa-github ml-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 mb-2 d-flex align-items-stretch">
+            <div class="card">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Crypto Seek Logo">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h4 class="card-title">Crypto Seek</h4>
+                <p class="card-text">React Web App to track live cryptocurrency prices</p>
+                <div class="button-group" role="group">
+                  <a href="http://cryptoseek.emanuelnikolov.tech/" class="btn btn-primary mb-1">Visit Website<i
+                    class="fa fa-sign-in ml-2"></i></a>
+                  <a href="https://github.com/EmanuelNikolov/crypto-seek" class="btn btn-primary mb-1">View on GitHub<i
+                      class="fa fa-github ml-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4 mb-2 d-flex align-items-stretch">
+            <div class="card">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="IGDB API Bundle Logo">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h4 class="card-title">Symfony Wrapper for the IGDB API</h4>
+                <p class="card-text">Bundle for the <a href="https://api.igdb.com/">IGDB.com</a> Free Video Game Database API</p>
+                <div class="button-group" role="group">
+                  <a href="https://github.com/EmanuelNikolov/IgdbApiBundle" class="btn btn-primary mb-1">
+                    View on GitHub<i class="fa fa-github ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Heading End -->
+    </section>
+  </main>
+  <!-- Main End -->
 
-  <!--  -->
+  <!-- Footer Start  -->
+  <footer class="footer text-center">
+    <p>2018 &copy; Emanuel Nikolov</p>
+  </footer>
+  <!-- Footer End -->
 </body>
 
 </html>

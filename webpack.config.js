@@ -12,7 +12,6 @@ module.exports = {
         'babel-polyfill',
         './src/js/index.js',
         './src/scss/main.scss',
-        './node_modules/mdbootstrap/scss/mdb.scss',
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -23,7 +22,7 @@ module.exports = {
             {
                 enforce: 'pre',
                 test: /\.js?$/,
-                exclude: [/node_modules/, /vendors/, /dist/],
+                exclude: [/node_modules/, /dist/],
                 loader: 'eslint-loader',
                 options: {
                     fix: true,
@@ -31,7 +30,7 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
-                exclude: [/node_modules/, /vendors/, /dist/],
+                exclude: [/node_modules/, /dist/],
                 use: [
                     {
                         loader: 'babel-loader',
@@ -82,7 +81,6 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.$': 'jquery',
-            Waves: 'node-waves',
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
