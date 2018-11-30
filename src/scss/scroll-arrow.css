@@ -1,0 +1,64 @@
+.round {
+    position: relative;
+    border: 3px solid #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+  
+  span.arrow {
+    z-index: 999;
+    height: 3px;
+    margin: -0.04rem;
+    width: 18px;
+    background: #000;
+    transition: 0.4s ease;
+  }
+  
+  span.arrow:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+  }
+  
+  span.arrow:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+  }
+  
+  span.arrow:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+  }
+  
+  span.arrow:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+  }
+  
+  .round:hover span.arrow:nth-child(1) {
+    transform: rotate(-135deg);
+  }
+  
+  .round:hover span.arrow:nth-child(2) {
+    transform: rotate(135deg);
+  }
+  
+  .round:hover span.arrow:nth-child(3) {
+    transform: rotate(225deg);
+  }
+  
+  .round:hover span.arrow:nth-child(4) {
+    transform: rotate(-225deg);
+  }

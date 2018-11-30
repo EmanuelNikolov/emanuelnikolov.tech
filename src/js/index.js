@@ -1,15 +1,16 @@
-import 'jquery';
+import 'jquery/dist/jquery.slim.js';
 import 'popper.js';
-require("font-awesome-webpack-4");
 import particles from 'particles.js';
+
+$("#year").text(new Date().getFullYear());
 
 const particlesConfig = {
     "particles": {
         "number": {
-            "value": 109,
+            "value": 200,
             "density": {
                 "enable": true,
-                "value_area": 1500
+                "value_area": 1250
             }
         },
         "color": {
@@ -22,7 +23,7 @@ const particlesConfig = {
                 "color": "#000000"
             },
             "polygon": {
-                "nb_sides": 5
+                "nb_sides": 3
             },
             "image": {
                 "src": "img/github.svg",
@@ -59,7 +60,7 @@ const particlesConfig = {
         },
         "move": {
             "enable": true,
-            "speed": 2,
+            "speed": 1.5,
             "direction": "none",
             "random": true,
             "straight": false,

@@ -1,10 +1,15 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~font-awesome/css/font-awesome.css";
+@import "~bootstrap/scss/bootstrap";
+@import "./scroll-arrow.css";
 
 html {
   scroll-behavior: smooth;
 }
 
-html, body, header, #particles-js {
+html,
+body,
+header,
+#particles-js {
   height: 100%;
 }
 
@@ -17,83 +22,44 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-	background: #fff;
+  background: #fff;
 }
 
 .black {
   color: #000;
 }
 
-hr { 
-  border: 0; 
-  height: 1px; 
+hr {
+  border: 0;
+  height: 1px;
   background-image: -webkit-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
   background-image: -moz-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #000, #f0f0f0); 
+  background-image: -o-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
 }
 
-.round {
-  position: relative;
-  border: 3px solid #000;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
+h1,
+h2 {
+  font-size: 2rem;
 }
 
-span {
-  z-index: 999;
-  height: 3px;
-  margin: -0.04rem;
-  width: 18px;
-  background: #000;
-  transition: 0.4s ease;
+@include media-breakpoint-up(sm) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
 }
 
-span:first-child {
-  display: block;
-  position: absolute;
-  transform: rotate(45deg);
-  left: 25%;
-  bottom: 35%;
+@include media-breakpoint-up(md) {
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
-span:nth-child(2) {
-  display: block;
-  position: absolute;
-  transform: rotate(-45deg);
-  left: 45%;
-  bottom: 35%;
-}
-
-span:nth-child(3) {
-  display: block;
-  position: absolute;
-  transform: rotate(45deg);
-  left: 25%;
-  bottom: 54%;
-}
-
-span:nth-child(4) {
-  display: block;
-  position: absolute;
-  transform: rotate(-45deg);
-  left: 45%;
-  bottom: 54%;
-}
-
-.round:hover span:nth-child(1) {
-  transform: rotate(-135deg);
-}
-
-.round:hover span:nth-child(2) {
-  transform: rotate(135deg);
-}
-
-.round:hover span:nth-child(3) {
-  transform: rotate(225deg);
-}
-
-.round:hover span:nth-child(4) {
-  transform: rotate(-225deg);
+@include media-breakpoint-up(lg) {
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
 }

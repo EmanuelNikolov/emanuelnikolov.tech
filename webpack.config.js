@@ -1,12 +1,23 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     optimization: {
-        minimize: true
+        minimizer: [
+            new UglifyJsPlugin(),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            'jquery': 'jquery/dist/jquery.slim.js',
+        }
     },
     entry: [
         'babel-polyfill',
@@ -19,15 +30,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                enforce: 'pre',
-                test: /\.js?$/,
-                exclude: [/node_modules/, /dist/],
-                loader: 'eslint-loader',
-                options: {
-                    fix: true,
-                },
-            },
             {
                 test: /\.js?$/,
                 exclude: [/node_modules/, /dist/],
@@ -49,24 +51,16 @@ module.exports = {
                 ],
             },
             {
-                test: /\.html$/,
-                use: ['html-loader'],
-            },
-            {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
-            },
-            {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "file-loader?name=fonts/[name].[ext]"
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                    useRelativePath: true,
-                },
+                test: /\.(png|jpе?g|gif)$/,
+                loader: 'file-loader?name=img/[name].[ext]',
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader'],
             },
             // particles.js
             {
