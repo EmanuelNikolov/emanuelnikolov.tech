@@ -25,6 +25,20 @@ canvas {
   background: #fff;
 }
 
+.game-hound-img {
+  background-color: #343434;
+  height: 300px;
+}
+
+.crypto-seek-img {
+  background-color: #1a1a1d;
+  height: 300px;
+}
+
+.symfony-wrapper-igdb-img {
+  height: 300px;
+}
+
 .black {
   color: #000;
 }
@@ -38,28 +52,40 @@ hr {
   background-image: -o-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
 }
 
-h1,
+h1 {
+  font-size: 2.3rem;
+}
+
 h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 @include media-breakpoint-up(sm) {
-  h1,
+  h1 {
+    font-size: 2.3rem;
+  }
+
   h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 }
 
 @include media-breakpoint-up(md) {
-  h1,
-  h2 {
+  h1 {
     font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  h1,
-  h2 {
+  h1 {
     font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
   }
 }

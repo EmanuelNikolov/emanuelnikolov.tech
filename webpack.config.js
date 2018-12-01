@@ -77,6 +77,7 @@ module.exports = {
             'window.$': 'jquery',
         }),
         new HtmlWebpackPlugin({
+            favicon: 'src/img/favicon.png',
             template: 'src/index.html',
         }),
         new CleanWebpackPlugin(['dist']),
