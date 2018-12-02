@@ -1,8 +1,15 @@
-import 'jquery/dist/jquery.slim.js';
-import 'popper.js';
 import particles from 'particles.js';
+import smoothscroll from 'smoothscroll-polyfill';
 
-$("#year").text(new Date().getFullYear());
+smoothscroll.polyfill();
+
+// Dynamic Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Smooth Scroll
+document.getElementById("scroll-button").addEventListener("click", () => {
+    document.getElementById("about-me").scrollIntoView({ behavior: "smooth", block: "start" });
+});
 
 const particlesConfig = {
     "particles": {

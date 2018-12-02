@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -12,12 +11,6 @@ module.exports = {
             new UglifyJsPlugin(),
             new OptimizeCSSAssetsPlugin({})
         ]
-    },
-    resolve: {
-        extensions: ['.js'],
-        alias: {
-            'jquery': 'jquery/dist/jquery.slim.js',
-        }
     },
     entry: [
         'babel-polyfill',
@@ -71,11 +64,6 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: 'main.css' }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.$': 'jquery',
-        }),
         new HtmlWebpackPlugin({
             favicon: 'src/img/favicon.png',
             template: 'src/index.html',

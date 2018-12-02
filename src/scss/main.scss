@@ -1,6 +1,6 @@
 @import "~font-awesome/css/font-awesome.css";
 @import "~bootstrap/scss/bootstrap";
-@import "./scroll-arrow.css";
+@import "./scroll-arrow.scss";
 
 html {
   scroll-behavior: smooth;
@@ -36,6 +36,7 @@ canvas {
 }
 
 .symfony-wrapper-igdb-img {
+  background-color: #fff;
   height: 300px;
 }
 
